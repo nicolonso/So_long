@@ -1,0 +1,46 @@
+							SO LONG -- Project
+
+
+1. The base and the structure of So-Long is already done and is working well, the 
+first step is set up and envoirment that can compile my program every time that include
+my own library, an the minilbx library as is neccessary for this project.
+
+The next stept is make that the program create and windown, as we already ionvestigaty is a vital that
+we need to work with .ber files that is the container of my video game and is givin me the structure 
+of my program 
+
+2. Ber Files
+	Values in this file
+
+	- 1 -> Wall
+	- 0 -> Empty Floor 
+	- P -> Player
+	- C -> Collectible 
+	- E -> Exit
+	
+-----------------------------------------------  START -----------------------------------------------------
+
+✅ Step 1 — Load the Map File
+
+The first real goal is:
+
+Read the .ber file and store it in memory.
+
+What to do:
+	Open file
+
+	Read line by line
+
+	Store into a char **
+
+Functions you’ll use:
+	open
+
+	get_next_line
+
+	malloc
+
+	Output test:
+
+Testing
+	Just print the map:
