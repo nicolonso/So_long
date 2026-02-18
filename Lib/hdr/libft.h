@@ -6,7 +6,7 @@
 /*   By: nalfonso <nalfonso@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 13:22:20 by nalfonso          #+#    #+#             */
-/*   Updated: 2025/09/15 19:38:47 by nalfonso         ###   ########.fr       */
+/*   Updated: 2026/02/18 21:38:53 by nalfonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,18 @@
 # include <unistd.h>
 # include <limits.h>
 # include <stdarg.h>
+# include <fcntl.h>
+# include <stdio.h>
 
 //Definition to my printf
 # define CHEXADECIMAL "0123456789ABCDEF"
 # define HEXADECIMAL "0123456789abcdef"
+
+// Get Next line buffer
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 10
+# endif
 
 typedef unsigned long long	t_number;
 
@@ -64,5 +72,18 @@ char	*ft_substr(char const *s, unsigned int start, size_t len);
 //Printf function
 
 int		ft_printf(const char *format, ...);
+
+//------------ Get Next Line ---------------------------------
+
+// Get_next line Function
+char	*get_next_line(int fd);
+
+// Utilities of my get_next_line
+size_t	ft_strlen_nl(const char *str);
+char	*ft_strjoin_gn(char *s1, char *s2);
+char	*ft_check_nl(const char *s, int c);
+char	*extract_line(char *buffer);
+char	*buffer_rest(char *buffer);
+
 
 #endif

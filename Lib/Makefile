@@ -52,11 +52,14 @@ FTSTR_DIR		=	$(SRC_DIR)ft_str/ft_split.c \
 
 FTPRINTF_DIR	=	$(SRC_DIR)ft_print_f/ft_printf.c \
 
+GETNEXTLINE_DIR	= 	$(SRC_DIR)Get_next_Line/get_next_line_utils.c \
+					$(SRC_DIR)Get_next_Line/get_next_line.c \
+
 
 # Concatenate all source files
-SRC 			= $(FTIS_DIR) $(FTMEM_DIR) $(FTPUT_DIR) $(FTTO_DIR) $(FTTO_DIR) $(FTSTR_DIR) $(FTPRINTF_DIR)
+SRC 			= $(FTIS_DIR) $(FTMEM_DIR) $(FTPUT_DIR) $(FTTO_DIR) $(FTTO_DIR) $(FTSTR_DIR) $(FTPRINTF_DIR) $(GETNEXTLINE_DIR)
 
-# Apply the pattern substitution to each source file in SRC and produce a corresponding list of object files in the OBJ_DIR
+# Apply the pattern substitution to each sourcemake f file in SRC and produce a corresponding list of object files in the OBJ_DIR
 OBJ 			= $(patsubst $(SRC_DIR)%.c,$(OBJ_DIR)%.o,$(SRC))
 
 # Build rules

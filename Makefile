@@ -17,12 +17,11 @@ RM					= rm -f
 MLX_FLAGS			= -lXext -lX11 -lm -lz
 
 # Source Files
-#UTILITIES_DIR		=	$(SRC_DIR)Commands/push.c \
-						$(SRC_DIR)Commands/reverse.c \
-						$(SRC_DIR)Commands/rotate.c \
-						$(SRC_DIR)Commands/swap.c \
-
+# UTILITIES_DIR		=	$(SRC_DIR)Utilities/Get_next_Line/get_next_line_utils.c \
+						$(GETNEXTLINE_DIRSRC_DIR)Utilities/Get_next_Line/get_next_line.c \
+						
 SO_LONG_DIR			=	$(SRC_DIR)So_long/so_long.c \
+
 						
 
 #ALGORITHM_DIR		=	$(SRC_DIR)Algorithm/sort_stacks.c \
