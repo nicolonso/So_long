@@ -6,7 +6,7 @@
 /*   By: nalfonso <nalfonso@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/11 12:08:15 by nalfonso          #+#    #+#             */
-/*   Updated: 2026/03/01 23:30:15 by nalfonso         ###   ########.fr       */
+/*   Updated: 2026/03/02 23:08:31 by nalfonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,17 @@
 # include <fcntl.h>
 # include <stdio.h>
 
+// Space in bytes for my images
+# define TILE 32
+
+// Linux Key codes (X11)
+
+# define KEY_ESC 	65307
+# define KEY_W		119
+# define KEY_A		97
+# define KEY_S		115
+# define KEY_D		100
+
 // Structures 
 
 typedef struct s_map
@@ -37,6 +48,26 @@ typedef struct s_map
     int     px;
     int     py;
 }   t_map;
+
+typedef struct s_game
+{
+	void	*mlx;
+	void	*win;
+	char	**grid;
+	int		width;
+	int		heigth;
+	int		px;
+	int		py;
+	int		collectibles;
+	int		img_w;
+	int		img_h;
+	int		moves;
+	void	*img_wall;
+	void	*img_floor;
+	void	*img_player;
+	void	*img_collect;
+	void	*img_exit;
+}	t_game;
 
 //Initialize structures
 
@@ -63,5 +94,17 @@ int 	ft_len_map_square(char **map);
 
 void 	ft_free(char **ptr, int row);
 char 	*ft_dup_no_nl(char *line);
+
+// Architecture 
+
+void 	ft_find_player(t_game *g);
+void	ft_game_init(t_game *g, char **grid, int w, int h);
+void	ft_put_image(t_game *g, void *img, int x, int y);
+int		ft_load_textures(t_game *g);
+void	ft_render_map(t_game *g);
+int		ft_handle_key(int keycode, void *param);
+int		ft_handle_close(void *param);
+void	*ft_load(t_game *g, char *path);
+void	ft_move_it(t_game *g, int nx, int ny);
 
 #endif

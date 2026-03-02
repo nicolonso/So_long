@@ -21,23 +21,17 @@ PARSING_DIR			=	$(SRC_DIR)Parsing/helper_functions.c \
 						$(SRC_DIR)Parsing/parsing.c \
 						$(SRC_DIR)Parsing/reacheable.c
 					
-						
+ARCHITECTURE_DIR	=	$(SRC_DIR)Architecture/game_init.c \
+						$(SRC_DIR)Architecture/hooks.c \
+						$(SRC_DIR)Architecture/render.c \
+						$(SRC_DIR)Architecture/textures.c
+
 SO_LONG_DIR			=	$(SRC_DIR)So_long/so_long.c
 
 						
-
-#ALGORITHM_DIR		=	$(SRC_DIR)Algorithm/sort_stacks.c \
-						$(SRC_DIR)Algorithm/sort_three.c \
-						$(SRC_DIR)Algorithm/stack_init_a_to_b.c \
-						$(SRC_DIR)Algorithm/stack_init_b_to_a.c \
-
-
-
-
-
 # Concatenate all source files
 
-SRCS 				= $(SO_LONG_DIR) $(PARSING_DIR)
+SRCS 				= $(SO_LONG_DIR) $(PARSING_DIR) $(ARCHITECTURE_DIR)
 
 # Apply the pattern substitution to each source file in SRC and produce a corresponding list of object files in the OBJ_DIR
 OBJ 				= $(patsubst $(SRC_DIR)%.c,$(OBJ_DIR)%.o,$(SRCS))
