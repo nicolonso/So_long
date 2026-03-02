@@ -17,10 +17,12 @@ RM					= rm -f
 MLX_FLAGS			= -lXext -lX11 -lm -lz
 
 # Source Files
-# UTILITIES_DIR		=	$(SRC_DIR)Utilities/Get_next_Line/get_next_line_utils.c \
-						$(GETNEXTLINE_DIRSRC_DIR)Utilities/Get_next_Line/get_next_line.c \
+PARSING_DIR			=	$(SRC_DIR)Parsing/helper_functions.c \
+						$(SRC_DIR)Parsing/parsing.c \
+						$(SRC_DIR)Parsing/reacheable.c
+					
 						
-SO_LONG_DIR			=	$(SRC_DIR)So_long/so_long.c \
+SO_LONG_DIR			=	$(SRC_DIR)So_long/so_long.c
 
 						
 
@@ -34,7 +36,8 @@ SO_LONG_DIR			=	$(SRC_DIR)So_long/so_long.c \
 
 
 # Concatenate all source files
-SRCS 				= $(SO_LONG_DIR)
+
+SRCS 				= $(SO_LONG_DIR) $(PARSING_DIR)
 
 # Apply the pattern substitution to each source file in SRC and produce a corresponding list of object files in the OBJ_DIR
 OBJ 				= $(patsubst $(SRC_DIR)%.c,$(OBJ_DIR)%.o,$(SRCS))
