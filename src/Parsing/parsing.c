@@ -6,7 +6,7 @@
 /*   By: nalfonso <nalfonso@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/17 18:47:20 by nalfonso          #+#    #+#             */
-/*   Updated: 2026/03/01 23:51:34 by nalfonso         ###   ########.fr       */
+/*   Updated: 2026/03/03 23:03:44 by nalfonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ int ft_read_map_gnl(int fd, t_map *m)
 	char 	*row;
 	int		len;
 
-	ft_init_map(m); //  I can move this line before enter to this function.
+	ft_init_map(m);
 	while ((line = get_next_line(fd)) != NULL)
 	{
 		len = ft_line_len_no_nl(line);

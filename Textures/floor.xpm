@@ -1,8 +1,9 @@
 /* XPM */
-static char *floor_xpm[] = {
-"64 64 2 1",
-"  c #bbbbbb",
-". c #dddddd",
+static char *floor[] = {
+/* columns rows colors chars-per-pixel */
+"64 64 1 1 ",
+"  c #A1D6E7",
+/* pixels */
 "                                                                ",
 "                                                                ",
 "                                                                ",

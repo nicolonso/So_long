@@ -6,7 +6,7 @@
 /*   By: nalfonso <nalfonso@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/11 12:08:15 by nalfonso          #+#    #+#             */
-/*   Updated: 2026/03/02 23:08:31 by nalfonso         ###   ########.fr       */
+/*   Updated: 2026/03/03 23:30:08 by nalfonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@
 # include <stdio.h>
 
 // Space in bytes for my images
-# define TILE 32
+# define TILE 64
 
 // Linux Key codes (X11)
 
@@ -102,9 +102,13 @@ void	ft_game_init(t_game *g, char **grid, int w, int h);
 void	ft_put_image(t_game *g, void *img, int x, int y);
 int		ft_load_textures(t_game *g);
 void	ft_render_map(t_game *g);
-int		ft_handle_key(int keycode, void *param);
-int		ft_handle_close(void *param);
 void	*ft_load(t_game *g, char *path);
 void	ft_move_it(t_game *g, int nx, int ny);
+
+// Movements of player
+
+int		ft_handle_key(int keycode, void *param);
+int		ft_handle_close(void *param);
+int ft_move_player(t_game *g);
 
 #endif

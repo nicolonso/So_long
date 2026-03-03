@@ -1,8 +1,10 @@
 /* XPM */
-static char *exit_xpm[] = {
-"64 64 2 1",
-"  c #000000",
-". c #0000ff",
+static char *exit[] = {
+/* columns rows colors chars-per-pixel */
+"64 64 2 1 ",
+"  c black",
+". c blue",
+/* pixels */
 "                                                                ",
 "                                                                ",
 "                                                                ",

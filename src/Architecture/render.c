@@ -6,7 +6,7 @@
 /*   By: nalfonso <nalfonso@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/02 19:10:19 by nalfonso          #+#    #+#             */
-/*   Updated: 2026/03/02 19:43:06 by nalfonso         ###   ########.fr       */
+/*   Updated: 2026/03/03 23:16:30 by nalfonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,10 @@ void ft_render_map(t_game *g)
 {
 	int x;
 	int y;
-	int t;
+	char t;
 
+	if (!g || !g->grid || g->width <= 0 || g->heigth <= 0)
+    	return;
 	y = 0;
 	while (y < g->heigth)
 	{
