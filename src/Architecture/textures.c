@@ -6,7 +6,7 @@
 /*   By: nalfonso <nalfonso@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/02 19:12:07 by nalfonso          #+#    #+#             */
-/*   Updated: 2026/03/03 23:13:57 by nalfonso         ###   ########.fr       */
+/*   Updated: 2026/03/04 18:28:59 by nalfonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,7 @@ void *ft_load(t_game *g, char *path)
 
 	int w = g->width;
 	int h = g->heigth;
-	
-	ft_printf("Load values: w=%d h=%d\n", g->width, g->heigth);
+
 	img = mlx_xpm_file_to_image(g->mlx, path, &w, &h);
 	if (!img)
 	{

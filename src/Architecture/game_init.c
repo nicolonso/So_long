@@ -6,7 +6,7 @@
 /*   By: nalfonso <nalfonso@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/02 19:11:51 by nalfonso          #+#    #+#             */
-/*   Updated: 2026/03/02 19:33:21 by nalfonso         ###   ########.fr       */
+/*   Updated: 2026/03/04 23:06:46 by nalfonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ void ft_find_player(t_game *g)
 	g->py = -1;
 }
 
-void	ft_game_init(t_game *g, char **grid, int w, int h)
+void	ft_game_init(t_game *g, t_map *m, char **grid, int w, int h)
 {
 	g->mlx = NULL;
 	g->win = NULL;
@@ -49,7 +49,7 @@ void	ft_game_init(t_game *g, char **grid, int w, int h)
 	g->img_floor = NULL;
 	g->img_exit = NULL;
 	g->img_wall = NULL;
-	g->collectibles = 0;
+	g->collectibles = m->c_count;
 	g->moves = 0;
 	g->img_w = TILE;
 	g->img_h = TILE;

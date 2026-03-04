@@ -6,11 +6,18 @@
 /*   By: nalfonso <nalfonso@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/02 19:10:19 by nalfonso          #+#    #+#             */
-/*   Updated: 2026/03/03 23:16:30 by nalfonso         ###   ########.fr       */
+/*   Updated: 2026/03/04 23:10:46 by nalfonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../hdr/so_long.h"
+
+int loop_render(void *param)
+{
+	t_game *g = param;
+	ft_render_map(g);
+	return (0);
+}
 
 void ft_put_image(t_game *g, void *img, int x, int y)
 {

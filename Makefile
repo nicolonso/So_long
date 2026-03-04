@@ -25,7 +25,6 @@ ARCHITECTURE_DIR	=	$(SRC_DIR)Architecture/game_init.c \
 						$(SRC_DIR)Architecture/hooks.c \
 						$(SRC_DIR)Architecture/render.c \
 						$(SRC_DIR)Architecture/textures.c \
-						$(SRC_DIR)Architecture/rules.c
 
 
 SO_LONG_DIR			=	$(SRC_DIR)So_long/so_long.c
