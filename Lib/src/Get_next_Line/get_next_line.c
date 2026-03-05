@@ -19,7 +19,7 @@ char	*get_next_line(int fd)
 	ssize_t		bytes;
 
 	if (fd < 0 || BUFFER_SIZE <= 0)
-		return (NULL);
+		return (free(buffer), buffer = NULL, NULL);
 	line = malloc(BUFFER_SIZE + 1);
 	if (!line)
 		return (NULL);
@@ -40,19 +40,3 @@ char	*get_next_line(int fd)
 	buffer = buffer_rest(buffer);
 	return (line);
 }
-
-// int main()
-// {
-// 	//int fd = open("Poem.txt", O_RDONLY);
-// 	int count = 0;
-// 	char *next_line;
-//	
-// 	while ((next_line = get_next_line (0)) != NULL)
-// 	{
-// 		count++;
-// 		printf("[%d]: %s",count, next_line);
-// 		free(next_line);
-// 	}
-// 	//close (fd);
-// 	return (0);
-// }

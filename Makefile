@@ -18,6 +18,7 @@ MLX_FLAGS			= -lXext -lX11 -lm -lz
 
 # Source Files
 PARSING_DIR			=	$(SRC_DIR)Parsing/helper_functions.c \
+						$(SRC_DIR)Parsing/parsing_second_part.c \
 						$(SRC_DIR)Parsing/parsing.c \
 						$(SRC_DIR)Parsing/reacheable.c
 					

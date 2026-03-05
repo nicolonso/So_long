@@ -6,17 +6,17 @@
 /*   By: nalfonso <nalfonso@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/02 19:11:51 by nalfonso          #+#    #+#             */
-/*   Updated: 2026/03/04 23:06:46 by nalfonso         ###   ########.fr       */
+/*   Updated: 2026/03/05 23:17:24 by nalfonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../hdr/so_long.h"
 
-void ft_find_player(t_game *g)
+void	ft_find_player(t_game *g)
 {
-	int x;
-	int y;
-	
+	int	x;
+	int	y;
+
 	y = 0;
 	while (g->grid[y])
 	{
@@ -37,13 +37,13 @@ void ft_find_player(t_game *g)
 	g->py = -1;
 }
 
-void	ft_game_init(t_game *g, t_map *m, char **grid, int w, int h)
+void	ft_game_init(t_game *g, t_map *m, char **grid)
 {
 	g->mlx = NULL;
 	g->win = NULL;
 	g->grid = grid;
-	g->width = w;
-	g->heigth = h;
+	g->width = m->width;
+	g->heigth = m->height;
 	g->img_player = NULL;
 	g->img_collect = NULL;
 	g->img_floor = NULL;

@@ -6,37 +6,39 @@
 /*   By: nalfonso <nalfonso@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/02 19:10:19 by nalfonso          #+#    #+#             */
-/*   Updated: 2026/03/04 23:10:46 by nalfonso         ###   ########.fr       */
+/*   Updated: 2026/03/05 23:07:45 by nalfonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../hdr/so_long.h"
 
-int loop_render(void *param)
+int	ft_loop_render(void *param)
 {
-	t_game *g = param;
+	t_game	*g;
+
+	g = param;
 	ft_render_map(g);
 	return (0);
 }
 
-void ft_put_image(t_game *g, void *img, int x, int y)
+void	ft_put_image(t_game *g, void *img, int x, int y)
 {
 	mlx_put_image_to_window(g->mlx, g->win, img, x * TILE, y * TILE);
 }
 
-void ft_render_map(t_game *g)
+void	ft_render_map(t_game *g)
 {
-	int x;
-	int y;
-	char t;
+	int		x;
+	int		y;
+	char	t;
 
 	if (!g || !g->grid || g->width <= 0 || g->heigth <= 0)
-    	return;
+		return ;
 	y = 0;
 	while (y < g->heigth)
 	{
-		x = 0;
-		while (x < g->width)
+		x = -1;
+		while (++x < g->width)
 		{
 			t = g->grid[y][x];
 			ft_put_image(g, g->img_floor, x, y);
@@ -48,7 +50,6 @@ void ft_render_map(t_game *g)
 				ft_put_image(g, g->img_player, x, y);
 			if (t == 'E')
 				ft_put_image(g, g->img_exit, x, y);
-			x++;
 		}
 		y++;
 	}

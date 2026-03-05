@@ -6,7 +6,7 @@
 /*   By: nalfonso <nalfonso@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 13:22:20 by nalfonso          #+#    #+#             */
-/*   Updated: 2026/02/18 21:38:53 by nalfonso         ###   ########.fr       */
+/*   Updated: 2026/03/05 23:21:19 by nalfonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,6 +84,5 @@ char	*ft_strjoin_gn(char *s1, char *s2);
 char	*ft_check_nl(const char *s, int c);
 char	*extract_line(char *buffer);
 char	*buffer_rest(char *buffer);
-
 
 #endif
